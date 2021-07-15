@@ -1,0 +1,10 @@
+.header {
+  height: 62px;
+  box-shadow: 0 1px 6px $color-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .header__img {
+    height: 32px;
+  }
+}

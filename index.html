@@ -17,5 +17,93 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <img src="./public/img/logo/ohmyfood.png" alt="" class="header__img" />
+    </header>
+    <main class="main">
+      <header class="mainHeader">
+        <section class="mainHeader__searchbar">
+          <i class="fas fa-map-marker-alt"></i>
+          <input
+            type="text"
+            class="mainHeader__input"
+            placeholder="Paris, Belleville"
+          />
+        </section>
+        <section class="mainHeader__info">
+          <h1 class="mainHeader__title">Réservez le menu qui vous convient</h1>
+          <p class="mainHeader__text">
+            Découvrez des restaurants d'exception, séléctionnés par nos soins.
+          </p>
+          <a href="#restaurants__list" class="mainHeader__link"
+            >Explorer nos restaurants</a
+          >
+        </section>
+      </header>
+      <section class="section">
+        <h2 class="section__title">Fonctionnement</h2>
+        <ul class="list">
+          <li class="list__elt">
+            <a href="#0" class="list__link"
+              ><i class="fas fa-mobile-alt"></i> Choississez un restaurant</a
+            >
+          </li>
+          <li class="list__elt">
+            <a href="#0" class="list__link"
+              ><i class="fas fa-list-ul"></i> Composez votre menu</a
+            >
+          </li>
+          <li class="list__elt">
+            <a href="#0" class="list__link"
+              ><i class="fas fa-store"></i> Dégustez au restaurant</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="section--grey">
+        <h2 class="section__title">Restaurants</h2>
+        <article class="card">
+          <a href="#0" class="card__link"
+            ><img src="" alt="assiette restaurant" class="card__img" />
+            <span class="card__infos">
+              <h3 class="card__title">La palette du goût</h3>
+              <card__location>Menilmontant</card__location>
+              <div class="card__icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </div>
+            </span>
+          </a>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <img
+          src="./public/img/logo/ohmyfood@2x.svg"
+          alt="logo"
+          class="footer__img"
+        />
+        <ul class="footer__list">
+          <li class="list__elt">
+            <a href="#0" class="list__link"
+              ><i class="fas fa-utensils"></i> Proposer un restaurant</a
+            >
+          </li>
+          <li class="list__elt">
+            <a href="#0" class="list__link"
+              ><i class="fas fa-hands-helping"></i>Devenir partenaire</a
+            >
+          </li>
+          <li class="list__elt">
+            <a href="#0" class="list__link">Mentions légales</a>
+          </li>
+          <li class="list__elt">
+            <a href="mailto:contact@ohmyfood.com" class="list__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
