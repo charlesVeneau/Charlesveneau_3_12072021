@@ -1,0 +1,7 @@
+.btn {
+  border-radius: 50px;
+  background-image: linear-gradient($color-secondary, $color-primary);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  @include box-shadow;
+}

@@ -1,4 +1,9 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-terthary: #99e2d0;
-$color-shadow: rgba(0, 0, 0, 0.2);
+$color-shadow: rgba(0, 0, 0, 0.15);
+$color-shadow-darken: darken($color-shadow, 50%);
+$color-block: #f6f6f6;
+
+$border-radius: 16px;
+$bullets: "1" "2" "3";
