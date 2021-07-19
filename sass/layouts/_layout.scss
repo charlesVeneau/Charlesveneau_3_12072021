@@ -24,15 +24,12 @@
     border: none;
     background-color: transparent;
     width: 95px;
+    outline: none;
     &::placeholder {
       color: black;
     }
-    &:hover {
-      outline: none;
-    }
   }
   &__info {
-    background-color: $color-block;
     text-align: center;
     padding: 2rem;
   }
@@ -49,8 +46,10 @@
 }
 
 .section {
-  margin: 3.25rem 1.25rem;
-
+  padding: 3.25rem 1.25rem;
+  &--grey {
+    background-color: $color-block;
+  }
   & .list {
     margin-top: 2rem;
     padding-left: 0.75rem;
@@ -60,6 +59,7 @@
       position: relative;
       z-index: 1;
       @include before-bullet($bullets);
+      transition: box-shadow 300ms;
       & .link__bg {
         position: absolute;
         z-index: -1;
@@ -73,7 +73,7 @@
         transition: opacity 250ms;
       }
       &:hover {
-        @include box-shadow($color-shadow-darken);
+        @include box-shadow($color-shadowDarken);
         & .link__bg {
           opacity: 1;
         }
@@ -95,6 +95,53 @@
         & i {
           color: $color-primary;
         }
+      }
+    }
+  }
+}
+
+.card {
+  height: 254px;
+  @include box-shadow;
+  border-radius: 1rem;
+  &__link {
+    height: 100%;
+  }
+  &__img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+  }
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+    padding: 0 1rem;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__icon {
+    font-size: 1.3rem;
+    position: relative;
+    & .fas {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 400ms;
+    }
+    & .far {
+      opacity: 1;
+      transition: opacity 400ms;
+    }
+    &:hover {
+      & .fas {
+        opacity: 1;
+        background: linear-gradient($color-secondary, $color-primary);
+      }
+      & .far {
+        opacity: 0;
       }
     }
   }
