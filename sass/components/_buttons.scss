@@ -3,6 +3,8 @@
   background-image: linear-gradient($color-secondary, $color-primary);
   color: #fff;
   padding: 1rem 1.5rem;
+  min-width: 186px;
+  text-align: center;
   @include box-shadow;
   transition: all 300ms;
   &:hover {

@@ -60,3 +60,9 @@
     }
   }
 }
+
+@mixin card {
+  @include box-shadow;
+  border-radius: 1rem;
+  margin-bottom: 1.3rem;
+}

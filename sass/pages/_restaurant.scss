@@ -22,6 +22,7 @@
   }
   &__icon {
     margin-right: 0.8rem;
+    -webkit-text-stroke: 1px white;
     @include likeIcons(1.65rem);
   }
 }
