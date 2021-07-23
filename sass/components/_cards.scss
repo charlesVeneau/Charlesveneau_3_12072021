@@ -50,17 +50,22 @@
     text-align: left;
     cursor: pointer;
     display: inline-flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     padding: 0;
     overflow: hidden;
+    animation: slidingUp 800ms 600ms;
     &:hover {
       & .cardBtn {
         &__added {
-          animation: slidingLeft 2s ease-in 100ms;
+          flex: 1;
+          transform: translateX(0px);
           & .fas {
-            animation: rotate 1500ms ease 500ms;
+            transform: rotate(360deg);
           }
+        }
+        &__price {
+          padding-right: 1rem;
         }
       }
     }
@@ -84,18 +89,22 @@
     }
     &__price {
       font-weight: 700;
-      padding-right: 1rem;
+      transition: padding 800ms 350ms;
     }
     &__added {
-      height: 100%;
-      width: $added-width;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: $added-width;
       text-align: center;
       font-size: 1.2rem;
       color: #fff;
       background-color: $color-terthary;
       transform: translateX($added-width);
+      transition: all 800ms 200ms;
       & .fas {
-        transform: rotate(220deg);
+        transform: rotate(90deg);
+        transition: transform 600ms 260ms;
       }
     }
   }

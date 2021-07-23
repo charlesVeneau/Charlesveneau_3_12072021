@@ -164,6 +164,9 @@ button {
 .section--grey {
   background-color: #f6f6f6;
 }
+.section--middle {
+  text-align: center;
+}
 .section__title {
   margin-bottom: 2rem;
 }
@@ -412,18 +415,22 @@ button {
   text-align: left;
   cursor: pointer;
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   padding: 0;
   overflow: hidden;
+  -webkit-animation: slidingUp 800ms 600ms;
+          animation: slidingUp 800ms 600ms;
 }
 .cardBtn:hover .cardBtn__added {
-  -webkit-animation: slidingLeft 2s ease-in 100ms;
-          animation: slidingLeft 2s ease-in 100ms;
+  flex: 1;
+  transform: translateX(0px);
 }
 .cardBtn:hover .cardBtn__added .fas {
-  -webkit-animation: rotate 1500ms ease 500ms;
-          animation: rotate 1500ms ease 500ms;
+  transform: rotate(360deg);
+}
+.cardBtn:hover .cardBtn__price {
+  padding-right: 1rem;
 }
 .cardBtn__block {
   padding: 0.75rem 0;
@@ -445,19 +452,23 @@ button {
 }
 .cardBtn__price {
   font-weight: 700;
-  padding-right: 1rem;
+  transition: padding 800ms 350ms;
 }
 .cardBtn__added {
-  height: 100%;
-  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60px;
   text-align: center;
   font-size: 1.2rem;
   color: #fff;
   background-color: #99e2d0;
-  transform: translateX(50px);
+  transform: translateX(60px);
+  transition: all 800ms 200ms;
 }
 .cardBtn__added .fas {
-  transform: rotate(220deg);
+  transform: rotate(90deg);
+  transition: transform 600ms 260ms;
 }
 
 .footer {
@@ -480,54 +491,24 @@ button {
   font-size: 12px;
 }
 
-@-webkit-keyframes slidingLeft {
-  0% {
-    transform: translateX(50px);
+@-webkit-keyframes slidingUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  25% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes slidingLeft {
-  0% {
-    transform: translateX(50px);
+@keyframes slidingUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  25% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(220deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(220deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */
