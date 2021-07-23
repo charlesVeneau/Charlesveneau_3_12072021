@@ -1,11 +1,20 @@
 .header {
+  position: relative;
   height: 62px;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
-  .header__img {
+  &__img {
     height: 32px;
+  }
+  &__link {
+    position: absolute;
+    font-size: 1.125rem;
+    color: $color-textLight;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
   }
 }

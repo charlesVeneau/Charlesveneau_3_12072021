@@ -31,3 +31,32 @@
     }
   }
 }
+
+@mixin likeIcons($font-size) {
+  position: relative;
+  cursor: pointer;
+  font-size: $font-size;
+  width: $font-size;
+  height: $font-size;
+  & .fas {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 400ms;
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & .far {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 400ms;
+  }
+  &:hover {
+    & .fas {
+      opacity: 1;
+    }
+    & .far {
+      opacity: 0;
+    }
+  }
+}

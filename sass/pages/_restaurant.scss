@@ -1,0 +1,27 @@
+.restaurantHeader {
+  background: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 270px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  &__info {
+    background-color: $color-block;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 1.125rem 0 1.125rem;
+  }
+  &__title {
+    font-family: "Shrikhand", cursive;
+    margin: 0;
+    font-size: 1.65rem;
+  }
+  &__icon {
+    margin-right: 0.8rem;
+    @include likeIcons(1.65rem);
+  }
+}

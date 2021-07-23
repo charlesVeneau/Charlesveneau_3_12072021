@@ -1,8 +1,10 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-terthary: #99e2d0;
-$color-shadow: rgba(#000000, 0.2);
-$color-shadowDarken: rgba(#000000, 0.4);
+$color-text: #000000;
+$color-textLight: lighten($color-text, 30%);
+$color-shadow: rgba($color-text, 0.2);
+$color-shadowDarken: rgba($color-text, 0.4);
 $color-block: #f6f6f6;
 
 $border-radius: 16px;

@@ -134,30 +134,7 @@
     font-weight: 300;
   }
   &__icon {
-    font-size: 1.3rem;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    & .fas {
-      position: absolute;
-      opacity: 0;
-      transition: opacity 400ms;
-      background: -webkit-linear-gradient($color-primary, $color-secondary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    & .far {
-      position: absolute;
-      opacity: 1;
-      transition: opacity 400ms;
-    }
-    &:hover {
-      & .fas {
-        opacity: 1;
-      }
-      & .far {
-        opacity: 0;
-      }
-    }
+    margin-bottom: 6px;
+    @include likeIcons(1.3rem);
   }
 }
