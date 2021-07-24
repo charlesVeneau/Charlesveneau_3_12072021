@@ -58,53 +58,64 @@
     &:hover {
       & .cardBtn {
         &__added {
-          flex: 1;
+          // flex: 1;
           transform: translateX(0px);
           & .fas {
             transform: rotate(360deg);
           }
         }
         &__price {
-          padding-right: 1rem;
+          // padding-right: 1rem;
+        }
+        &__block {
+          flex: 0 0 80%;
         }
       }
     }
     &__block {
       padding: 0.75rem 0;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-grow: 1;
-    }
-    &__infos {
+      flex-direction: column;
+      // justify-content: space-between;
+      align-items: flex-start;
+      min-width: 0;
+      flex: 0 0 100%;
+      transition: all 800ms 300ms;
       padding-left: 0.75rem;
     }
+    &__infos {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
     &__title {
-      margin-bottom: 0.45rem;
+      margin: 0 0 0.45rem 0;
     }
     &__location {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      margin: 0;
     }
     &__price {
       font-weight: 700;
-      transition: padding 800ms 350ms;
+      padding: 0 1rem;
+      // transition: padding 800ms 350ms;
     }
     &__added {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: $added-width;
+      width: $added-width;
       text-align: center;
       font-size: 1.2rem;
       color: #fff;
       background-color: $color-terthary;
       transform: translateX($added-width);
-      transition: all 800ms 200ms;
+      transition: all 800ms 100ms;
       & .fas {
         transform: rotate(90deg);
-        transition: transform 600ms 260ms;
+        transition: transform 600ms 160ms;
       }
     }
   }

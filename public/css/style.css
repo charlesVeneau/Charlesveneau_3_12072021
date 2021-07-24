@@ -423,52 +423,57 @@ button {
           animation: slidingUp 800ms 600ms;
 }
 .cardBtn:hover .cardBtn__added {
-  flex: 1;
   transform: translateX(0px);
 }
 .cardBtn:hover .cardBtn__added .fas {
   transform: rotate(360deg);
 }
-.cardBtn:hover .cardBtn__price {
-  padding-right: 1rem;
+.cardBtn:hover .cardBtn__block {
+  flex: 0 0 80%;
 }
 .cardBtn__block {
   padding: 0.75rem 0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-grow: 1;
-}
-.cardBtn__infos {
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  flex: 0 0 100%;
+  transition: all 800ms 300ms;
   padding-left: 0.75rem;
 }
+.cardBtn__infos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .cardBtn__title {
-  margin-bottom: 0.45rem;
+  margin: 0 0 0.45rem 0;
 }
 .cardBtn__location {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0;
 }
 .cardBtn__price {
   font-weight: 700;
-  transition: padding 800ms 350ms;
+  padding: 0 1rem;
 }
 .cardBtn__added {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 60px;
+  width: 60px;
   text-align: center;
   font-size: 1.2rem;
   color: #fff;
   background-color: #99e2d0;
   transform: translateX(60px);
-  transition: all 800ms 200ms;
+  transition: all 800ms 100ms;
 }
 .cardBtn__added .fas {
   transform: rotate(90deg);
-  transition: transform 600ms 260ms;
+  transition: transform 600ms 160ms;
 }
 
 .footer {
