@@ -164,8 +164,13 @@ button {
 .section--grey {
   background-color: #f6f6f6;
 }
+.section--lowPadding {
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+}
 .section--middle {
   text-align: center;
+  padding: 3rem;
 }
 .section__title {
   margin-bottom: 2rem;
@@ -419,8 +424,42 @@ button {
   justify-content: space-between;
   padding: 0;
   overflow: hidden;
-  -webkit-animation: slidingUp 800ms 600ms;
-          animation: slidingUp 800ms 600ms;
+}
+.cardBtn--1 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 1) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 1) backwards;
+}
+.cardBtn--2 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 2) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 2) backwards;
+}
+.cardBtn--3 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 3) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 3) backwards;
+}
+.cardBtn--4 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 4) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 4) backwards;
+}
+.cardBtn--5 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 5) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 5) backwards;
+}
+.cardBtn--6 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 6) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 6) backwards;
+}
+.cardBtn--7 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 7) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 7) backwards;
+}
+.cardBtn--8 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 8) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 8) backwards;
+}
+.cardBtn--9 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 9) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 9) backwards;
 }
 .cardBtn:hover .cardBtn__added {
   transform: translateX(0px);
@@ -473,7 +512,7 @@ button {
 }
 .cardBtn__added .fas {
   transform: rotate(90deg);
-  transition: transform 600ms 160ms;
+  transition: transform 600ms 300ms;
 }
 
 .footer {
@@ -499,7 +538,7 @@ button {
 @-webkit-keyframes slidingUp {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -510,7 +549,7 @@ button {
 @keyframes slidingUp {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;

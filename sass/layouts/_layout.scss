@@ -40,8 +40,13 @@
   &--grey {
     background-color: $color-block;
   }
+  &--lowPadding {
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+  }
   &--middle {
     text-align: center;
+    padding: 3rem;
   }
   &__title {
     margin-bottom: 2rem;
