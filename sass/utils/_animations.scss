@@ -8,3 +8,29 @@
     transform: translateY(0);
   }
 }
+
+@keyframes spinning {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%) rotate(490deg);
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}

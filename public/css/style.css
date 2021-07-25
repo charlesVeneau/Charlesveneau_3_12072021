@@ -98,10 +98,10 @@ button {
   transform: translateY(-50%);
 }
 
-.main {
+body {
   position: relative;
 }
-.main .spinner {
+body .spinner {
   position: absolute;
   background-color: #ffffff;
   top: 0;
@@ -109,12 +109,22 @@ button {
   bottom: 0;
   left: 0;
   z-index: 4;
+  -webkit-animation: fadeout 2600ms forwards;
+          animation: fadeout 2600ms forwards;
 }
-.main .spinner::after {
+body .spinner::after {
   content: "";
-  width: 36px;
-  height: 36px;
-  border: 4px solid #9356dc;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 5px solid #9356dc;
+  border-bottom: 5px solid transparent;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: spinning 1000ms cubic-bezier(0.41, 0.01, 0.58, 1) infinite;
+          animation: spinning 1000ms cubic-bezier(0.41, 0.01, 0.58, 1) infinite;
 }
 
 .mainHeader__searchbar {
@@ -288,10 +298,6 @@ button {
 }
 
 .restaurantHeader {
-  background: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   height: 270px;
   display: flex;
   flex-flow: column;
@@ -337,6 +343,27 @@ button {
 }
 .restaurantHeader__icon:hover .far {
   opacity: 0;
+}
+
+.lapalettedugoutHeader {
+  background: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ledelicedessensHeader {
+  background: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lanoteenchanteeHeader {
+  background: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card {
@@ -461,6 +488,10 @@ button {
   -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 9) backwards;
           animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 9) backwards;
 }
+.cardBtn--10 {
+  -webkit-animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 10) backwards;
+          animation: slidingUp 800ms cubic-bezier(0.38, 0.18, 0.21, 0.99) calc(300ms * 10) backwards;
+}
 .cardBtn:hover .cardBtn__added {
   transform: translateX(0px);
 }
@@ -554,5 +585,53 @@ button {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%) rotate(490deg);
+  }
+}
+@keyframes spinning {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%) rotate(490deg);
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }/*# sourceMappingURL=style.css.map */
