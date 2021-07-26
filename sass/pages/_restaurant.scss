@@ -7,13 +7,29 @@
     @include tablet {
       height: 380px;
     }
+    @include desktop {
+      height: 480px;
+    }
+
     &__info {
       background-color: $color-block;
       border-radius: 2rem 2rem 0 0;
+      padding: 1.6rem 1.125rem 0 1.125rem;
+      @include desktop {
+        justify-content: flex-start;
+        gap: 2rem;
+      }
+    }
+    &__main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.6rem 1.125rem 0 1.125rem;
+      max-width: 1024px;
+      margin: 0 auto;
+      @include desktop {
+        gap: 3rem;
+        justify-content: flex-start;
+      }
     }
     &__title {
       font-family: "Shrikhand", cursive;
@@ -28,7 +44,11 @@
   }
   &Menu {
     background-color: #f6f6f6;
-    @include card-tablet(space-between);
+    &__list {
+      max-width: 1024px;
+      margin: 0 auto;
+      @include card-tablet(space-between);
+    }
   }
 }
 

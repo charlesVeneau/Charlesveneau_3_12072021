@@ -78,6 +78,9 @@
         }
         &__block {
           flex: 0 0 80%;
+          @include desktop {
+            flex: 0 0 84%;
+          }
         }
       }
     }
@@ -138,4 +141,8 @@
 
 .cards {
   @include card-tablet(center);
+  @include desktop {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }

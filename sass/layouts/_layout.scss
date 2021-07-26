@@ -47,6 +47,9 @@
       width: 50%;
       margin: 0;
     }
+    @include desktop {
+      width: 45%;
+    }
   }
   &--middle {
     text-align: center;
