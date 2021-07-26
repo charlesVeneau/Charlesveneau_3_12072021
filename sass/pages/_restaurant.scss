@@ -1,25 +1,34 @@
-.restaurantHeader {
-  height: 270px;
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-end;
-  &__info {
-    background-color: $color-block;
-    border-radius: 2rem 2rem 0 0;
+.restaurant {
+  &Header {
+    height: 270px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.6rem 1.125rem 0 1.125rem;
+    flex-flow: column;
+    justify-content: flex-end;
+    @include tablet {
+      height: 380px;
+    }
+    &__info {
+      background-color: $color-block;
+      border-radius: 2rem 2rem 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 1.125rem 0 1.125rem;
+    }
+    &__title {
+      font-family: "Shrikhand", cursive;
+      margin: 0;
+      font-size: 1.65rem;
+    }
+    &__icon {
+      margin-right: 0.8rem;
+      -webkit-text-stroke: 1px white;
+      @include likeIcons(1.65rem);
+    }
   }
-  &__title {
-    font-family: "Shrikhand", cursive;
-    margin: 0;
-    font-size: 1.65rem;
-  }
-  &__icon {
-    margin-right: 0.8rem;
-    -webkit-text-stroke: 1px white;
-    @include likeIcons(1.65rem);
+  &Menu {
+    background-color: #f6f6f6;
+    @include card-tablet(space-between);
   }
 }
 

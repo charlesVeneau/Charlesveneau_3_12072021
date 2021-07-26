@@ -43,6 +43,10 @@
   &--lowPadding {
     padding-top: 1.5rem;
     padding-bottom: 0;
+    @include tablet {
+      width: 50%;
+      margin: 0;
+    }
   }
   &--middle {
     text-align: center;

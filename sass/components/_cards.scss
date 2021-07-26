@@ -130,13 +130,12 @@
         transition: transform 600ms 300ms;
       }
     }
+    @include tablet {
+      height: auto;
+    }
   }
 }
 
 .cards {
-  @include tablet {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  @include card-tablet(center);
 }

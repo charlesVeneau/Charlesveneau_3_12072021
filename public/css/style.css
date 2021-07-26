@@ -178,6 +178,12 @@ body .spinner::after {
   padding-top: 1.5rem;
   padding-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .section--lowPadding {
+    width: 50%;
+    margin: 0;
+  }
+}
 .section--middle {
   text-align: center;
   padding: 3rem;
@@ -315,6 +321,11 @@ body .spinner::after {
   flex-flow: column;
   justify-content: flex-end;
 }
+@media screen and (min-width: 768px) {
+  .restaurantHeader {
+    height: 380px;
+  }
+}
 .restaurantHeader__info {
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
@@ -355,6 +366,16 @@ body .spinner::after {
 }
 .restaurantHeader__icon:hover .far {
   opacity: 0;
+}
+.restaurantMenu {
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 768px) {
+  .restaurantMenu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .lapalettedugoutHeader {
@@ -574,6 +595,11 @@ body .spinner::after {
 .cardBtn__added .fas {
   transform: rotate(90deg);
   transition: transform 600ms 300ms;
+}
+@media screen and (min-width: 768px) {
+  .cardBtn {
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
