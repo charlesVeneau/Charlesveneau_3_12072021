@@ -1,11 +1,16 @@
 .card {
   height: 254px;
   @include card;
+  @include tablet {
+    margin: 0 0.75rem 1.3rem 0.75rem;
+    flex: 0 0 45%;
+  }
   &--low {
     height: auto;
   }
   &__link {
     height: 100%;
+    width: 100%;
     position: relative;
   }
   &__newLogo {
@@ -125,5 +130,13 @@
         transition: transform 600ms 300ms;
       }
     }
+  }
+}
+
+.cards {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

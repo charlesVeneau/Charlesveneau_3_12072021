@@ -50,6 +50,9 @@
   }
   &__title {
     margin-bottom: 2rem;
+    @include tablet {
+      text-align: center;
+    }
     &--light {
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
@@ -70,6 +73,11 @@
   }
   & .list {
     padding-left: 0.75rem;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
 
     &__elt {
       @include card;

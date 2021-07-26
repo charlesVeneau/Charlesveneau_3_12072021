@@ -66,3 +66,15 @@
   border-radius: 1rem;
   margin-bottom: 1.3rem;
 }
+
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
