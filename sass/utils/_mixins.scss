@@ -35,6 +35,7 @@
 @mixin likeIcons($font-size) {
   position: relative;
   cursor: pointer;
+  -webkit-text-stroke: 1px white;
   font-size: $font-size;
   width: $font-size;
   height: $font-size;
